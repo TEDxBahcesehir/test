@@ -63,7 +63,8 @@ NAV SPAN[collapsed]:hover {
 }
 
 NAV SPAN[collapsed] A {
-	display:none;
+	_display: none;
+	font-size: 0;
 }
 
 NAV SPAN A:before {
@@ -142,6 +143,8 @@ H1 {
 
 SECTION {
 	font-size: 1.2em;
+	color: #222;
 	padding: 48px;
 	box-sizing: border-box;
+	text-shadow: -1px -1px 1px #ccc;
 }
