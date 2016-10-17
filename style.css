@@ -3,6 +3,22 @@
 	Author: Mert Akengin - @pvtmert
 	Adjustments & Fixes: Zafer Huzmeli - @zaferhuzmeli
 */
+@import url('//fonts.googleapis.com/css?family=Nova+Cut');
+@import url('//fonts.googleapis.com/css?family=Macondo+Swash+Caps');
+@import url('//fonts.googleapis.com/css?family=Faster+One');
+@import url('//fonts.googleapis.com/css?family=Offside');
+@import url('//fonts.googleapis.com/css?family=Piedra&subset=latin-ext');
+@import url('//fonts.googleapis.com/css?family=Codystar:300,400&subset=latin-ext');
+@import url('//fonts.googleapis.com/css?family=Megrim');
+@import url('//fonts.googleapis.com/css?family=Knewave&subset=latin-ext');
+@import url('//fonts.googleapis.com/css?family=Oregano:400,400i&subset=latin-ext');
+@import url('//fonts.googleapis.com/css?family=Finger+Paint');
+@import url('//fonts.googleapis.com/css?family=Kelly+Slab&subset=latin-ext');
+@import url('//fonts.googleapis.com/css?family=Cabin+Sketch');
+@import url('//fonts.googleapis.com/css?family=Chelsea+Market&subset=latin-ext');
+@import url('//fonts.googleapis.com/css?family=Monoton');
+@import url('//fonts.googleapis.com/css?family=Yatra+One&subset=latin-ext');
+@import url('//fonts.googleapis.com/css?family=Special+Elite');
 
 * {
 	transition: 0.25s;
@@ -38,6 +54,8 @@ NAV A, NAV SPAN {
 	color: firebrick;
 	text-decoration: none;
 	cursor: hand;
+	margin: 4px auto;
+	font-size: 1.0em;
 }
 
 NAV SPAN[collapsed]:hover {
@@ -97,11 +115,13 @@ H1 {
 	position: relative;
 	background-size: cover;
 	background-attachment: local;
-	filter: blur(5px);
+	filter: blur(4px);
 	height: 100%;
 }
 
 .container .container H1 {
+	text-transform: uppercase;
+	font-family: "Special Elite";
 	top: -6em;
 	display: block;
 	position: relative;
