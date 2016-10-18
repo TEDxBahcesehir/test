@@ -44,7 +44,8 @@ window.onhashchange = (function(e) {
 });
 
 window.onscroll = (function(e) {
-	//console.log(document.getElementById("main").getElementsByClassName("container")[0]);
+	if(navigator.userAgent.toLowerCase().indexOf("chrome") < 0)
+		return;
 	document
 		.getElementById("main")
 		//.getElementsByClassName("container")[0]
