@@ -4,6 +4,14 @@
 //
 
 function start() {
+	var anchors = document.querySelectorAll("A");
+	console.log(anchors);
+	for(var i=0;i<anchors.length;i++) {
+		if(anchors[i].attributes.href.value.substring(0,2) === "//") {
+			anchors[i].target = "_blank";
+		}
+		continue;
+	};
 	fix_images();
 	_menus();
 	return;

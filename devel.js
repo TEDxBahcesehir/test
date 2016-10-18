@@ -7,11 +7,12 @@ function refresh(url) {
 			return;
 		clenstr = this.getResponseHeader("content-length");
 		clen = parseInt(clenstr);
+		chinfo = this.getResponseHeader("etag");
 		if(last[url] === undefined)
-			last[url] = clen;
-		else if(last[url] === 0)
-			last[url] = clen;
-		else if(clen !== last[url])
+			last[url] = { "size": clen, "tag": chinfo, };
+		else if(last[url].size === 0)
+			last[url].size = clen;
+		else if(clen !== last[url].size || chinfo !== last[url].tag)
 			window.location.reload();
 		return;
 	}
@@ -28,7 +29,7 @@ window.onload = function() {
 			"devel.js",
 			"main.js",
 		].forEach(function(elem,index,orig) {
-			setInterval("refresh('" + elem + "')",100);
+			setInterval("refresh('" + elem + "')",333);
 			return;
 		});
 	}

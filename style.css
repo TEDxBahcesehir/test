@@ -19,6 +19,7 @@
 @import url('//fonts.googleapis.com/css?family=Monoton');
 @import url('//fonts.googleapis.com/css?family=Yatra+One&subset=latin-ext');
 @import url('//fonts.googleapis.com/css?family=Special+Elite');
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
 
 * {
 	transition: 0.25s;
@@ -46,7 +47,7 @@ NAV {
 	text-align: left;
 	width: 20%;
 	padding: 8px 24px;
-	box-shadow:inset 0 0 0.5em #333;
+	box-shadow:inset 0 0 0.5em #444;
 	box-sizing: border-box;
 	font-size: 1.1em;
 }
@@ -76,10 +77,12 @@ NAV SPAN[collapsed]:hover {
 }
 
 NAV SPAN[collapsed] A {
-	_display: none;
 	font-size: 0;
 	margin: 0;
 	padding: 0;
+}
+NAV SPAN[collapsed] A :not(A) {
+	display:none;
 }
 NAV SPAN:not([collapsed]) {
 	padding:6px;
@@ -175,3 +178,47 @@ SECTION {
 	box-sizing: border-box;
 	text-shadow: -1px -1px 1px #ccc;
 }
+
+.icon {
+	vertical-align:bottom;
+}
+.check.icon {
+  color: firebrick;
+  position: absolute;
+  margin-left: -18px;
+  margin-top: 4px;
+  width: 14px;
+  height: 8px;
+  border-bottom: solid 1px currentColor;
+  border-left: solid 1px currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.menu.icon {
+  color: firebrick;
+  position: absolute;
+  margin-left: 2px;
+  margin-top: 10px;
+  width: 17px;
+  height: 1px;
+  background-color: currentColor;
+}
+.menu.icon:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 17px;
+  height: 1px;
+  background-color: currentColor;
+}
+.menu.icon:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 17px;
+  height: 1px;
+  background-color: currentColor;
+}
+
