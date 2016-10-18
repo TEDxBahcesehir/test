@@ -43,3 +43,12 @@ window.onhashchange = (function(e) {
 	return true;
 });
 
+window.onscroll = (function(e) {
+	//console.log(document.getElementById("main").getElementsByClassName("container")[0]);
+	document
+		.getElementById("main")
+		//.getElementsByClassName("container")[0]
+		.getElementsByTagName("h1")[0]
+		.style.filter = "blur(" + Math.min((window.scrollY/25),10) + "px)";
+	return;
+});

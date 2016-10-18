@@ -28,6 +28,8 @@ window.onload = function() {
 			"style.css",
 			"devel.js",
 			"main.js",
+			"home.htm",
+			"team.htm",
 		].forEach(function(elem,index,orig) {
 			setInterval("refresh('" + elem + "')",333);
 			return;
