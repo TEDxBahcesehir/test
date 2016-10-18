@@ -36,6 +36,6 @@ window.onload = function() {
 	if(window.location.hash.length > 0)
 		window.onhashchange(null);
 	else
-		window.location.hash = "!home.htm";
+		window.location.hash = "!home";
 	return;
 };
