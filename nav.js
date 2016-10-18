@@ -17,4 +17,3 @@ function _menus() {
 		});
 	}
 };
-_menus();

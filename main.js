@@ -3,7 +3,7 @@
 // TEDxBahcesehir - 2017
 //
 
-function start() {
+function _ext_links() {
 	var anchors = document.querySelectorAll("A");
 	console.log(anchors);
 	for(var i=0;i<anchors.length;i++) {
@@ -12,6 +12,11 @@ function start() {
 		}
 		continue;
 	};
+	return;
+}
+
+function start() {
+	_ext_links();
 	fix_images();
 	_menus();
 	return;
@@ -33,7 +38,9 @@ window.onhashchange = (function(e) {
 		});
 		req.open("GET", toload, true);
 		req.send(null);
+		start();
 		return false;
 	}
 	return true;
 });
+
