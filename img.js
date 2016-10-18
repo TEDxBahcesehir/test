@@ -1,3 +1,8 @@
+//
+// img.js
+// TEDxBahcesehir - 2017
+//
+
 function fix_images() {
 	var __imglist = document.querySelectorAll("[data-img]");
 	for (var i=0;i<__imglist.length;i++) {
@@ -7,4 +12,3 @@ function fix_images() {
 		__imglist[i].style.backgroundImage = prop;
 	}
 };
-fix_images();

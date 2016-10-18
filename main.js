@@ -3,18 +3,29 @@
 // TEDxBahcesehir - 2017
 //
 
-function _menus() {
-	var __elements = document.querySelectorAll("[collapsed]");
-	for (var i=0;i<__elements.length;i++) {
-		__elements[i].onclick = (function(e) {
-			if(e.target != this)
+function start() {
+	fix_images();
+	_menus();
+	return;
+}
+
+window.onhashchange = (function(e) {
+	//console.log(this,e,window.location);
+	if(window.location.hash.length > 1 && window.location.hash[1] === '!') {
+		var toload = window.location.hash.substring(2);
+		var req = new XMLHttpRequest();
+		req.responseType = "text";
+		req.onload = (function(e) {
+			if(this.status !== 200)
 				return;
-			if(this.attributes.getNamedItem("collapsed"))
-				this.removeAttribute("collapsed");
-			else
-				this.setAttribute("collapsed","");
+			//console.log(this,e);
+			document.getElementById("main").innerHTML = this.response;
+			start();
 			return;
 		});
+		req.open("GET", toload, true);
+		req.send(null);
+		return false;
 	}
-};
-_menus();
+	return true;
+});
