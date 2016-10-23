@@ -265,3 +265,40 @@ SECTION {
 	height: 300px;
 	background-size: contain;
 }
+
+.container SECTION P.member {
+	background-size: cover;
+	background-position: center center;
+	display: block;
+	width: 300px;
+	height: 300px;
+	text-align: center;
+	margin:auto;
+	padding: 12px;
+}
+.container SECTION P.member A {
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	background-size: contain;
+	background-color: transparent;
+}
+.container SECTION P.member .text {
+	position: relative;
+	display: block;
+	margin: auto;
+	top: calc(100% - 4em);
+}
+
+.container SECTION P.member:nth-child(even) {
+	margin-left: 30%;
+}
+.container SECTION P.member:nth-child(even) .text {
+	text-align: right;
+}
+.container SECTION P.member:nth-child(odd) {
+	margin-right: 30%;
+}
+.container SECTION P.member:nth-child(odd) .text {
+	text-align: left;
+}
