@@ -274,35 +274,52 @@ SECTION {
 	background-size: cover;
 	background-position: center center;
 	display: block;
-	width: 300px;
-	height: 300px;
+	width: 33%;
+	height: 280px;
 	text-align: center;
-	margin:auto;
-	padding: 12px;
+	margin:0 auto;
+	padding:0;
+	overflow:hidden;
 }
 .container SECTION P.member A {
-	display: inline-block;
+	display: none;
 	width: 64px;
 	height: 64px;
 	background-size: contain;
 	background-color: transparent;
 }
+/*
+.container SECTION P.member:hover {
+	box-shadow:inset 0 0 0 300px rgba(220,0,0,0.8);
+	color:white;
+}
+.container SECTION P.member:hover A {
+	display: inline-block;
+}
+*/
 .container SECTION P.member .text {
-	position: relative;
 	display: block;
 	margin: auto;
-	top: calc(100% - 4em);
+	background-color: white;
+	padding: 4px;
+	border-radius: 4px;
+	margin: -4px;
 }
-
-.container SECTION P.member:nth-child(even) {
-	margin-left: 30%;
+.container SECTION P.member:nth-child(3n+1) .text {
+	position: relative;
+	clear:none;
+	display:inline-block;
+	float:left;
 }
-.container SECTION P.member:nth-child(even) .text {
-	text-align: right;
+.container SECTION P.member:nth-child(3n+0) {
+	margin-left: 40%;
 }
-.container SECTION P.member:nth-child(odd) {
-	margin-right: 30%;
+.container SECTION P.member:nth-child(3n+0) .text {
+	float: left;
 }
-.container SECTION P.member:nth-child(odd) .text {
-	text-align: left;
+.container SECTION P.member:nth-child(3n+2) {
+	margin-right: 40%;
+}
+.container SECTION P.member:nth-child(3n+2) .text {
+	float: right;
 }
