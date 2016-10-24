@@ -31,7 +31,7 @@ window.onload = function() {
 			"home.htm",
 			"team.htm",
 		].forEach(function(elem,index,orig) {
-			setInterval("refresh('" + elem + "')",333);
+			setInterval("refresh('" + elem + "')",999);
 			return;
 		});
 	}
