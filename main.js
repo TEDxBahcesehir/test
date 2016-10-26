@@ -54,3 +54,13 @@ window.onscroll = (function(e) {
 		.style.filter = "blur(" + Math.min((window.scrollY/25),10) + "px)";
 	return;
 });
+
+function menuToggle() {
+	var nav = document.getElementsByTagName("nav")[0];
+	var main = document.getElementById("main");
+	document.body.style.overflow = (nav.style.left == 0)?"hidden":"";
+	//nav.style.width = ((nav.style.width) == 0)?"280px":"";
+	nav.style.left = (nav.style.left == "")?"0px":"";
+	main.style.marginLeft = ((main.style.marginLeft) == 0)?"280px":"";
+	return;
+}
