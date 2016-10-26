@@ -32,6 +32,7 @@ window.onhashchange = (function(e) {
 				return;
 			//console.log(this,e);
 			document.getElementById("main").innerHTML = this.response;
+			window.scrollTo(0,0);
 			start();
 			return;
 		});
