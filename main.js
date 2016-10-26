@@ -45,7 +45,7 @@ window.onhashchange = (function(e) {
 
 window.onscroll = (function(e) {
 //	if(navigator.userAgent.toLowerCase().indexOf("chrome") < 0)
-//		return;
+		return;
 	document
 		.getElementById("main")
 		//.getElementsByClassName("container")[0]
