@@ -21,6 +21,7 @@ function start() {
 	return;
 }
 
+var firstTime = true;
 window.onhashchange = (function(e) {
 	//console.log(this,e,window.location);
 	if(window.location.hash.length > 1 && window.location.hash[1] === '!') {
@@ -33,6 +34,11 @@ window.onhashchange = (function(e) {
 			//console.log(this,e);
 			document.getElementById("main").innerHTML = this.response;
 			window.scrollTo(0,0);
+			if(!firstTime) {
+				menuToggle();
+			} else {
+				firstTime = false;
+			}
 			start();
 			return;
 		});
