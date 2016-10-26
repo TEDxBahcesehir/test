@@ -222,7 +222,7 @@ SECTION {
 	color: #222;
 	padding: 48px;
 	box-sizing: border-box;
-	text-shadow: -1px -1px 1px #ccc;
+	_text-shadow: -1px -1px 1px #ccc;
 }
 
 .icon {
