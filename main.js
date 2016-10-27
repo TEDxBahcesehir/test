@@ -39,7 +39,7 @@ window.onhashchange = (function(e) {
 			} else {
 				firstTime = false;
 			}
-			document.body.style.overflow = (""+"");
+			document.body.style.overflow = "auto";
 			start();
 			return;
 		});
