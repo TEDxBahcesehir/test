@@ -39,6 +39,7 @@ window.onhashchange = (function(e) {
 			} else {
 				firstTime = false;
 			}
+			document.body.style.overflow = "";
 			start();
 			return;
 		});
@@ -52,6 +53,7 @@ window.onhashchange = (function(e) {
 
 window.onscroll = (function(e) {
 //	if(navigator.userAgent.toLowerCase().indexOf("chrome") < 0)
+	document.getElementsByTagName("nav")[0].style.backgroundPosition = "0 -" + (window.scrollY) + "px";
 		return;
 	document
 		.getElementById("main")
@@ -68,5 +70,7 @@ function menuToggle() {
 	//nav.style.width = ((nav.style.width) == 0)?"280px":"";
 	nav.style.left = (nav.style.left == "")?"0px":"";
 	main.style.marginLeft = ((main.style.marginLeft) == 0)?"280px":"";
+	var menu = document.getElementsByTagName("nav")[1];
+	menu.style.left = (menu.style.left == 0)?"216px":"";
 	return;
 }
