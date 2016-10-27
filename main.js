@@ -32,7 +32,6 @@ window.onhashchange = (function(e) {
 			if(this.status !== 200)
 				return;
 			//console.log(this,e);
-			document.body.style.overflow = "";
 			document.getElementById("main").innerHTML = this.response;
 			window.scrollTo(0,0);
 			if(!firstTime) {
@@ -40,6 +39,7 @@ window.onhashchange = (function(e) {
 			} else {
 				firstTime = false;
 			}
+			document.body.style.overflow = "";
 			start();
 			return;
 		});
