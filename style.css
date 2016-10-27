@@ -389,7 +389,7 @@ NAV.mobile {
 @media (max-width: 960px) {
 	NAV { left:-280px; _width:0px; }
 	NAV.img { transition: 0.25s, background 0s; }
-	NAV .logo { width: 360px; overflow:auto; }
+	_NAV .logo { width: 360px; overflow:visible; }
 	.container#main { margin-left:0px; width:100%; }
 	NAV.mobile { display:block; box-shadow:none; }
 }
