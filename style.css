@@ -408,3 +408,27 @@ NAV .img.logo { filter:blur(8px); }
 	background-origin: content-box, border-box;
 }
 */
+
+.container SECTION.dk {
+	width: 49%;
+	height: auto;
+}
+.container SECTION.dk P {
+	margin: 0;
+}
+.container SECTION.dk A.dk {
+	display: inline-block;
+	float: left;
+	margin: 4px;
+	padding: 4px;
+	width: 240px;
+	height: 320px;
+	background-size: contain;
+	margin-top: 8px;
+}
+.container SECTION.dk[left] {
+	float: left;
+}
+.container SECTION.dk[right] {
+	float: right;
+}
