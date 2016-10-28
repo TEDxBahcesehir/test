@@ -30,6 +30,7 @@ window.onload = function() {
 			"main.js",
 			"home.htm",
 			"team.htm",
+			"contact.htm",
 		].forEach(function(elem,index,orig) {
 			setInterval("refresh('" + elem + "')",999);
 			return;
