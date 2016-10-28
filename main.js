@@ -71,6 +71,6 @@ function menuToggle() {
 	nav.style.left = (!nav.style.left)?"0px":null;
 	main.style.marginLeft = ((main.style.marginLeft) == 0)?"280px":null;
 	var menu = document.getElementsByTagName("nav")[1];
-	menu.style.left = (menu.style.left == 0)?"216px":null;
+//	menu.style.left = (menu.style.left == 0)?"216px":null;
 	return;
 }
