@@ -1,6 +1,4 @@
 
 # tedx playground
 
-[test.tedxbahcesehir.com](//test.tedxbahcesehir.com)
-
-
+[2017.tedxbahcesehir.com](//2017.tedxbahcesehir.com)
