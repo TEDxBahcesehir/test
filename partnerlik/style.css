@@ -1,0 +1,19 @@
+/*
+	TEDx Bahcesehir Main Page
+	Author: Mert Akengin
+*/
+
+.content IFRAME {
+	position:relative;
+	display:block;
+	min-width:99%;
+	min-height:99%;
+	width:auto;
+	height:auto;
+	_object-fit:cover;
+	_top:50%;
+	_left:50%;
+	_transform:translate(-50%,-50%);
+	min-height:calc(100% + 32px);
+	min-width:calc(100% + 0px);
+}

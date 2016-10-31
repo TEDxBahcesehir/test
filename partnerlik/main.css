@@ -1,0 +1,127 @@
+/*
+	TEDx Bahcesehir Main Page
+	Author: Mert Akengin
+*/
+
+* { transition:0.2s; }
+#cursor, #caption { transition:0s; }
+
+HTML, BODY {
+	background-color:black;
+	font-family:'Open Sans';
+	margin:0;
+	padding:0;
+}
+
+.img {
+	background-color:transparent;
+	background-position:center;
+	background-size:auto;
+	background-clip:border-box;
+	background-attachment:local;
+	background-repeat:no-repeat;
+}
+
+.content {
+	display:block;
+	width:100%;
+	height:100%;
+	font-size:0;
+	text-align:center;
+	text-decoration:none;
+	box-sizing:border-box;
+	overflow:hidden;
+}
+.content VIDEO {
+	position:relative;
+	display:block;
+	min-width:100%;
+	min-height:100%;
+	width:auto;
+	height:auto;
+	object-fit:cover;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.content DIV {
+	display:block;
+	position:absolute;
+	font-size:3.5rem;
+	font-weight:200;
+	background-color:rgba(0,0,0,0.4);
+	color:white;
+	padding:0;
+	padding-top:24vh;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	box-sizing:border-box;
+	text-shadow:-1px -1px 1px white;
+	vertical-align:middle;
+}
+.content DIV.sm {
+	top:initial;
+	bottom:initial;
+	left:0;
+	right:0;
+	height:80px;
+	min-width:0;
+	min-height:0;
+	width:auto;
+	font-size:0;
+	padding:0;
+	text-align:center;
+	background-color:rgba(255,255,255,0.5);
+	overflow:auto;
+	white-space:nowrap;
+}
+.sm A {
+	min-width:48px;
+	min-height:48px;
+	display:inline-block;
+	background-clip:content-box;
+	font-size:0;
+	padding:0;
+	border-radius:50%;
+	background-size:contain;
+	position:relative;
+	margin:15px 8px;
+	vertical-align:middle;
+}
+.sm A:hover { -webkit-filter:sepia(1); }
+.sm A.ext {
+	color:#222;
+	font-size:1.5rem;
+	vertical-align:middle;
+	padding:0px 6px;
+	text-shadow:none;
+	text-decoration:none;
+	border:1px solid #222;
+	border-radius:4px;
+	background-color:#ccc;
+	background-clip:border-box;
+	text-transform:capitalize;
+	min-height:32px;
+	margin:12px 6px;
+}
+.content DIV.sm.sm-small {
+	height:64px;
+}
+
+@keyframes cool {
+	from {
+		filter:grayscale(1.0) blur(4px);
+	}
+	to {
+		filter:grayscale(0.0) blur(0px);
+	}
+}
+
+@keyframes blinky {
+	from { opacity:1; }
+	to { opacity:0; }
+}
+
+#cursor { animation: blinky 0.2s infinite alternate ease-in-out; }
