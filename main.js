@@ -40,6 +40,7 @@ window.onhashchange = (function(e) {
 				firstTime = false;
 			}
 			document.body.style.overflow = "auto";
+			document.children[0].style.overflow = "auto";
 			start();
 			return;
 		});
@@ -67,10 +68,11 @@ function menuToggle() {
 	var nav = document.getElementsByTagName("nav")[0];
 	var main = document.getElementById("main");
 	document.body.style.overflow = (nav.style.left == 0)?"hidden":null;
-	//nav.style.width = ((nav.style.width) == 0)?"280px":null;
+	document.children[0].style.overflow = (nav.style.left == 0)?"hidden":null;
+	nav.style.width = ((nav.style.width) == 0)?"280px":null;
 	nav.style.left = (!nav.style.left)?"0px":null;
 	main.style.marginLeft = ((main.style.marginLeft) == 0)?"280px":null;
-	var menu = document.getElementsByTagName("nav")[1];
+//	var menu = document.getElementsByTagName("nav")[1];
 //	menu.style.left = (menu.style.left == 0)?"216px":null;
 	return;
 }
