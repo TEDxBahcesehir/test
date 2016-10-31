@@ -399,7 +399,7 @@ NAV.mobile {
 	right: 42px;
 	bottom: 42px;
 	padding: 14px 16px;
-	box-shadow: 0 0 0.5em #222;
+	box-shadow: 0 0 0.3em #333;
 }
 
 @media (max-width: 960px) {
