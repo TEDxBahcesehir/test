@@ -446,3 +446,13 @@ NAV .img.logo { filter:blur(8px); }
 .container SECTION.dk[right] {
 	float: right;
 }
+
+.container SECTION#gallery {
+	text-align:center;
+}
+.container SECTION#gallery A.img {
+	display: inline-block;
+	width: 320px;
+	height: 240px;
+	background-size: contain;
+}
