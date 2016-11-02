@@ -396,8 +396,8 @@ NAV.mobile {
 	border-radius:100%;
 	top: initial;
 	left: initial;
-	right: 42px;
-	bottom: 42px;
+	right: 24px;
+	bottom: 24px;
 	padding: 14px 16px;
 	box-shadow: 0 0 0.3em #333;
 }
