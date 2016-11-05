@@ -76,3 +76,33 @@ function menuToggle() {
 //	menu.style.left = (menu.style.left == 0)?"216px":null;
 	return;
 }
+
+window.addEventListener("touchstart", function(t) {
+	this["tStart"] = [
+		t.touches[0].pageX,
+		t.touches[0].pageY,
+	];
+	return;
+});
+
+let c = 25;
+let m = 80;
+window.addEventListener("touchmove", function(t) {
+	if(!this.tStart || this.lock) {
+		return;
+	}
+	console.log(this.tStart, t.touches[0].pageX, t.touches[0].pageY);
+	if( Math.round(this.tStart[1]/c) == Math.round(t.touches[0].pageY/c) ) {
+		if( Math.abs(this.tStart[0] - t.touches[0].pageX) > m ) {
+			this["lock"] = true;
+			menuToggle();
+		}
+	}
+	return;
+});
+
+window.addEventListener("touchend", function(t) {
+	this["lock"] = false;
+	return;
+});
+
