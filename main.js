@@ -6,7 +6,7 @@
 function _ext_links() {
 	var anchors = document.querySelectorAll("A");
 	for(var i=0;i<anchors.length;i++) {
-		if(anchors[i].attributes.href.value.substring(0,2) === "//") {
+		if(anchors[i].attributes.href.value.substring(0,2) === "//" || anchors[i].attributes.href.value.substring(0,4) === "http") {
 			anchors[i].target = "_blank";
 		}
 		continue;
@@ -105,4 +105,3 @@ window.addEventListener("touchend", function(t) {
 	this["lock"] = false;
 	return;
 });
-
