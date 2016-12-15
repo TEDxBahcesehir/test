@@ -175,7 +175,7 @@ NAV SPAN.logo {
 
 .img {
 	background-color:transparent;
-	background-position:center;
+	background-position: top;
 	background-size:auto;
 	background-clip:border-box;
 	background-attachment:local;
@@ -305,7 +305,7 @@ SECTION {
 .container SECTION A.sp {
 	display:inline-block;
 	width:300px;
-	height:300px;
+	height:200px;
 	background-size:contain;
 }
 
@@ -493,4 +493,3 @@ NAV .img.logo { filter:blur(8px); }
 	padding-left:3px;
 	font-family:Georgia;
 }
-
