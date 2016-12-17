@@ -319,7 +319,11 @@ SECTION {
 	margin:0 auto;
 	padding:0;
 	overflow:hidden;
+	padding:96px 48px;
+	box-sizing:border-box;
+	margin:2px 0;
 }
+
 .container SECTION P.member A {
 	display:inline-block;
 	visibility:hidden;
@@ -330,7 +334,6 @@ SECTION {
 	background-color:rgb(204,203,203);
 	position:relative;
 	transition:0s, 0.2s opacity;
-	margin-top:80px;
 }
 
 /*
@@ -349,8 +352,9 @@ SECTION {
 	background-color:white;
 	padding:4px;
 	border-radius:4px;
-	margin:-4px;
+	margin:-4px -48px;
 	position:relative;
+	margin-top:-96px;
 }
 
 .container SECTION P.member:nth-child(3n+1) .text {
