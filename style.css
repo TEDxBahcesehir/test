@@ -238,7 +238,6 @@ H2 {
 	;
 	box-sizing:border-box;
 	text-align:center;
-	background:linear-gradient(to top,black,transparent);
 	transition:0s;
 	_backdrop-filter:blur(4px);
 	_-webkit-backdrop-filter:blur(4px);
