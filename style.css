@@ -498,3 +498,31 @@ NAV .img.logo { filter:blur(8px); }
 	padding-left:3px;
 	font-family:Georgia;
 }
+
+.container SECTION#speakers {
+	text-align:center;
+}
+.container SECTION#speakers P.member {
+	height:480px;
+	margin:32px;
+	position:relative;
+}
+.container SECTION P.member .desc {
+	display:block;
+	margin:auto;
+	background-color:white;
+	padding:4px;
+	border-radius:4px;
+	_margin:-4px -48px;
+	position:relative;
+	display:inline-block;
+	position:absolute;
+	bottom:-1px;
+	right:-1px;
+	left:-1px;
+	background-color:rgba(255,255,255,0.85);
+	_backdrop-filter:blur(8px);
+}
+.container SECTION#speakers P.member .text {
+	font-size:1.1em;
+}
