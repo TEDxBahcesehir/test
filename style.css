@@ -437,6 +437,7 @@ NAV.mobile {
 	H1 { font-size:2.3em; }
 	H2 { margin:1em auto; }
 	.container SECTION P.member { width:67%; }
+	.container SECTION#speakers { padding:0px; }
 }
 /*
 NAV .img.logo { filter:blur(8px); }
