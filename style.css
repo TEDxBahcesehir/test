@@ -528,7 +528,7 @@ NAV .img.logo { filter:blur(8px); }
 	font-size:1.1em;
 }
 
-hr{
+hr .hr-stl{
 	padding: 0;
 	border: none;
 	margin: 18px;
@@ -536,7 +536,7 @@ hr{
 	color: #333;
 	text-align: center;
 }
-hr:after {
+hr .hr-stl:after {
 	content: "§";
      display: inline-block;
      position: relative;
