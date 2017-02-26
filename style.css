@@ -504,7 +504,8 @@ NAV .img.logo { filter:blur(8px); }
 	text-align:center;
 }
 .container SECTION#speakers P.member {
-	height:480px;
+	width: 25%;
+	height:360px;
 	margin:32px;
 	position:relative;
 }
