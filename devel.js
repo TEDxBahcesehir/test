@@ -42,5 +42,6 @@ window.onload = function() {
 		window.onhashchange(null);
 	else
 		window.location.hash = "!home";
+	document.getElementById("main").style.opacity = "1"; 
 	return;
 };

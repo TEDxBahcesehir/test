@@ -46,7 +46,7 @@ window.onhashchange = (function(e) {
 			start();
 			setTimeout(function(e) {
 				document.getElementById("loader").style.visibility = "hidden";
-				document.getElementById("main").style.opacity = "";
+				document.getElementById("main").style.opacity = "1";
 				return;
 			}, 99);
 			return;
