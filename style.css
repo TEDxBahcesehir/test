@@ -36,10 +36,25 @@ HTML {
 }
 
 BODY {
-	background-color:white;
 	margin:0;
 	padding:0;
 	box-sizing:border-box;
+	background-color:white;
+}
+
+#loader {
+	background-repeat:no-repeat;
+	background-image:url("./img/wait.gif");
+	background-size:initial;
+	_background-position:calc(50% + 140px) 50%;
+	background-position:center;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:0;
+	left:280px;
 }
 
 NAV {
@@ -171,6 +186,7 @@ NAV SPAN.logo {
 .container#main {
 	margin-left:280px;
 	_width:calc(99% - 20% - 1%);
+	background-color:inherit;
 }
 
 .img {
@@ -428,17 +444,6 @@ NAV.mobile {
 	box-shadow:0 0 0.3em #333;
 }
 
-@media (max-width:960px) {
-	NAV { left:-280px; _width:0px; }
-	NAV.img { transition:0s, transform 0.25s, left 0.25s; }
-	_NAV .logo { width:360px; overflow:visible; }
-	.container#main { margin-left:0px; width:100%; }
-	NAV.mobile { display:block; }
-	H1 { font-size:2.3em; }
-	H2 { margin:1em auto; }
-	.container SECTION P.member { width:67%; }
-	.container SECTION#speakers { padding:0px; }
-}
 /*
 NAV .img.logo { filter:blur(8px); }
 .img.logo.okay {
@@ -504,10 +509,11 @@ NAV .img.logo { filter:blur(8px); }
 	text-align:center;
 }
 .container SECTION#speakers P.member {
-	width: 25%;
+	width: 32%;
 	height:360px;
-	margin:32px;
+	margin:4px 2px;
 	position:relative;
+	border-radius:8px;
 }
 .container SECTION P.member .desc {
 	display:block;
@@ -549,4 +555,34 @@ hr.hr-stl:after {
 	 }
 .nav-container{
 	margin: 2em 0;
+}
+
+.container A.ticket {
+	display:inline-block;
+	margin:auto;
+	font-size:300%;
+	border:2px solid white;
+	border-radius:12px;
+	height:auto;
+	text-decoration:none;
+	padding:6px;
+	background-color:white;
+	color: rgb(44,11,11);
+}
+.container A.ticket:hover {
+	background-color: rgba(22,33,44,0.8);
+	color:white;
+}
+@media (max-width:960px) {
+	NAV { left:-280px; _width:0px; }
+	NAV.img { transition:0s, transform 0.25s, left 0.25s; }
+	_NAV .logo { width:360px; overflow:visible; }
+	.container#main { margin-left:0px; width:100%; }
+	NAV.mobile { display:block; }
+	H1 { font-size:2.3em; }
+	H2 { margin:1em auto; }
+	.container SECTION P.member { width:67%; }
+	.container SECTION#speakers { padding:0px; }
+	.container SECTION#speakers P.member { width:85%; height:67%; }
+	#loader { left:0; }
 }

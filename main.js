@@ -25,6 +25,8 @@ var firstTime = true;
 window.onhashchange = (function(e) {
 	//console.log(this,e,window.location);
 	if(window.location.hash.length > 1 && window.location.hash[1] === '!') {
+		document.getElementById("main").style.opacity = "0";
+		document.getElementById("loader").style.visibility = "";
 		var toload = window.location.hash.substring(2) + ".htm";
 		var req = new XMLHttpRequest();
 		req.responseType = "text";
@@ -42,6 +44,11 @@ window.onhashchange = (function(e) {
 			document.body.style.overflow = "auto";
 			document.children[0].style.overflow = "auto";
 			start();
+			setTimeout(function(e) {
+				document.getElementById("loader").style.visibility = "hidden";
+				document.getElementById("main").style.opacity = "";
+				return;
+			}, 99);
 			return;
 		});
 		req.open("GET", toload, true);
