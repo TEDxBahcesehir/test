@@ -25,7 +25,7 @@ window.onload = function() {
 	if(window.location.hostname == "localhost") {
 		[
 			window.location.toString(),
-			window.location.hash.substring(2) + ".htm",
+			window.location.hash.toString().substring(2) + ".htm",
 			"style.css",
 			"devel.js",
 			"main.js",
