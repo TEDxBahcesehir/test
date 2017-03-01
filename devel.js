@@ -25,12 +25,14 @@ window.onload = function() {
 	if(window.location.hostname == "localhost") {
 		[
 			window.location.toString(),
+			window.location.hash.substring(2) + ".htm",
 			"style.css",
 			"devel.js",
 			"main.js",
 			"home.htm",
 			"team.htm",
 			"contact.htm",
+			"speakers.htm",
 		].forEach(function(elem,index,orig) {
 			setInterval("refresh('" + elem + "')",999);
 			return;

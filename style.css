@@ -172,6 +172,7 @@ NAV A:not(.media):hover {
 }
 
 NAV SPAN.logo {
+	background-position:center;
 	background-size:contain;
 	height:90px;
 	margin:16px;
