@@ -28,6 +28,7 @@ A.ticket { font-family:"Kalam" !important; }
 
 * {
 	transition:0.25s;
+	text-decoration: none;
 }
 
 HTML {
