@@ -48,7 +48,7 @@ window.onhashchange = (function(e) {
 				document.getElementById("loader").style.visibility = "hidden";
 				document.getElementById("main").style.opacity = "1";
 				return;
-			}, 99);
+			}, 999);
 			return;
 		});
 		req.open("GET", toload, true);
