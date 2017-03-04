@@ -26,7 +26,7 @@ window.onhashchange = (function(e) {
 	//console.log(this,e,window.location);
 	if(window.location.hash.length > 1 && window.location.hash[1] === '!') {
 		document.getElementById("main").style.opacity = "0";
-		document.getElementById("loader").style.visibility = "";
+		document.getElementById("loader").style.visibility = "visible";
 		var toload = window.location.hash.substring(2) + ".htm";
 		var req = new XMLHttpRequest();
 		req.responseType = "text";
