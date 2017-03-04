@@ -52,7 +52,8 @@ window.onhashchange = (function(e) {
 			return;
 		});
 		req.open("GET", toload, true);
-		req.send(null);
+		setTimeout(function() { req.send(); }, 333);
+		//req.send(null);
 		start();
 		return false;
 	}
