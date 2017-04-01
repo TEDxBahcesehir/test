@@ -22,7 +22,29 @@ function start() {
 }
 
 var firstTime = true;
+var interval = null;
+var target = 1491647430 * 1000;
 window.onhashchange = (function(e) {
+	if(window.location.hash === "#!home") {
+		if(interval) clearInterval(interval);
+		interval = setInterval(function(e) {
+			var timer = document.getElementById("timer");
+			var date = new Date(target - Date.now())
+			var sep = ((date.getMilliseconds()%1)?" ":":");
+			timer.innerHTML = ""
+				+ date.getDate() + "g"
+				+ sep + ((date.getHours()<10)?"0":"")   + date.getHours()   + "s"
+				+ sep + ((date.getMinutes()<10)?"0":"") + date.getMinutes() + "d"
+				+ sep + ((date.getSeconds()<10)?"0":"") + date.getSeconds() + ""
+				+ "\n";
+			setTimeout(function(e) {
+				timer.style.color = "#ccc";
+				return;
+			}, 99);
+			timer.style.color = "#f20";
+			return;
+		}, 999);
+	}
 	//console.log(this,e,window.location);
 	if(window.location.hash.length > 1 && window.location.hash[1] === '!') {
 		document.getElementById("main").style.opacity = "0";
