@@ -23,19 +23,26 @@ function start() {
 
 var firstTime = true;
 var interval = null;
-var target = 1491647430 * 1000;
+var target = new Date(2017, 3, 8, 10, 30, 0, 0);
 window.onhashchange = (function(e) {
 	if(window.location.hash === "#!home") {
 		if(interval) clearInterval(interval);
 		interval = setInterval(function(e) {
 			var timer = document.getElementById("timer");
-			var date = new Date(target - Date.now())
-			var sep = ((date.getMilliseconds()%1)?" ":":");
+			var diff = (target - Date.now())/1000;
+			var calc = {
+				"sec": parseInt(diff)%60,
+				"min": parseInt(diff/60)%60,
+				"hrs": parseInt(diff/3600)%24,
+				"day": parseInt(diff/86400)%7,
+				"week": parseInt(diff/604800),
+			};
+			var sep = ":" //((date.getMilliseconds()%1)?" ":":");
 			timer.innerHTML = ""
-				+ date.getDate() + "g"
-				+ sep + ((date.getHours()<10)?"0":"")   + date.getHours()   + "s"
-				+ sep + ((date.getMinutes()<10)?"0":"") + date.getMinutes() + "d"
-				+ sep + ((date.getSeconds()<10)?"0":"") + date.getSeconds() + ""
+				+ ((calc.day===0)?"":(calc.day + "g" + sep))
+				+ ((calc.hrs<10)?"0":"") + calc.hrs + "s" + sep
+				+ ((calc.min<10)?"0":"") + calc.min + "d" + sep
+				+ ((calc.sec<10)?"0":"") + calc.sec + " "
 				+ "\n";
 			setTimeout(function(e) {
 				timer.style.color = "#ccc";
