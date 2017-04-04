@@ -39,10 +39,10 @@ window.onhashchange = (function(e) {
 			};
 			var sep = ":" //((date.getMilliseconds()%1)?" ":":");
 			timer.innerHTML = ""
-				+ ((calc.day===0)?"":(calc.day + "g" + sep))
-				+ ((calc.hrs<10)?"0":"") + calc.hrs + "s" + sep
-				+ ((calc.min<10)?"0":"") + calc.min + "d" + sep
-				+ ((calc.sec<10)?"0":"") + calc.sec + " "
+				+ ((calc.day===0)?"":(calc.day + "gün" + sep))
+				+ ((calc.hrs<10)?"0":"") + calc.hrs + "" + sep
+				+ ((calc.min<10)?"0":"") + calc.min + "" + sep
+				+ ((calc.sec<10)?"0":"") + calc.sec + ""
 				+ "\n";
 			setTimeout(function(e) {
 				timer.style.color = "#ccc";
