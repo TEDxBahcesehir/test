@@ -25,6 +25,7 @@ var firstTime = true;
 var interval = null;
 var target = new Date(2017, 3, 8, 10, 30, 0, 0);
 window.onhashchange = (function(e) {
+	/*
 	if(window.location.hash === "#!home") {
 		if(interval) clearInterval(interval);
 		interval = setInterval(function(e) {
@@ -52,6 +53,7 @@ window.onhashchange = (function(e) {
 			return;
 		}, 999);
 	}
+	*/
 	//console.log(this,e,window.location);
 	if(window.location.hash.length > 1 && window.location.hash[1] === '!') {
 		document.getElementById("main").style.opacity = "0";
