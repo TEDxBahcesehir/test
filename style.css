@@ -87,6 +87,8 @@ NAV.img {
 	background-attachment:fixed;
 	transition:background 0s;
 	background-size:cover;
+	border-radius: 30px;
+
 }
 
 NAV HR {
