@@ -65,8 +65,8 @@ BODY {
 NAV {
 	position:fixed;
 	left:0;
-	top:-0.5em;
-	bottom:-0.5em;
+	top:-1em;
+	bottom:-1em;
 	overflow:auto;
 	text-align:left;
 	width:280px;
